@@ -1,33 +1,34 @@
 import express from "express";
 import path, { dirname } from "path";
 import connectDB from "./config/db.js";
-import {files} from "./routes/files.js";
+import { files } from "./routes/files.js";
 import show from "./routes/show.js";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 import download from "./routes/download.js";
+import cors from "cors";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
 
-//Use static files 
-app.use(express.static('public'))
+//Use static files
+app.use(express.static("public"));
 
 //Parse json data
-app.use(express.json())
+app.use(express.json());
 
 //Connect to database
 connectDB();
 
 //Cors
-app.use(cors(corsOptions));
 const corsOptions = {
-  origin: process.env.ALLOWED_CLIENTS.split(',')
-}
+  origin: process.env.ALLOWED_CLIENTS.split(","),
+};
+app.use(cors(corsOptions));
 
 //Template engine
 app.set("views", path.join(__dirname, "/views"));
-app.set("view engine", 'ejs');
+app.set("view engine", "ejs");
 
 //Routes
 app.use("/api/files", files);
