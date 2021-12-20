@@ -16,7 +16,7 @@ const download = router.get("/:uuid", async (req, res) => {
   }
 //   const filePath = `${__dirname}/../${file.path}`;
  
-const filePath = path.resolve(`${__dirname}`, `${file.path}`) ;
+const filePath = path.resolve(`${__dirname}`,'..', `${file.path}`) ;
   
   res.download(filePath);
 });
