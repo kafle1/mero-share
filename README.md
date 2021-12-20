@@ -12,7 +12,7 @@ Mero Share is a simple file sharing platform that enables users to share their f
 
 Frontend - HTML, CSS, JS
 
-Backend - Node JS, Express, MongoDB, Multer, Heroku
+Backend - Node JS, Express, MongoDB, Multer, Heroku (https://mero-share.herokuapp.com/)
 
   
 ## Web App
