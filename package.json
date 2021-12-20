@@ -1,0 +1,25 @@
+{
+  "name": "mero-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
