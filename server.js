@@ -19,6 +19,12 @@ app.use(express.json())
 //Connect to database
 connectDB();
 
+//Cors
+app.use(cors(corsOptions));
+const corsOptions = {
+  origin: process.env.ALLOWED_CLIENTS.split(',')
+}
+
 //Template engine
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", 'ejs');
